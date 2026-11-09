@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RP ENTERPERNER - Luxury Real-Estates & Commercial Machinery</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            950: '#070C18',
+                            900: '#0B1325',
+                            800: '#111E38',
+                            700: '#1B2A4A',
+                        },
+                        gold: {
+                            400: '#FCE762',
+                            500: '#E6C35C',
+                            600: '#D4AF37',
+                            700: '#AA820A',
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF099 0%, #D4AF37 50%, #997A15 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-border-gradient {
+            border-image: linear-gradient(to right, #D4AF37, #997A15) 1;
+        }
+        .gold-btn {
+            background: linear-gradient(135deg, #E6C35C 0%, #D4AF37 50%, #B88E1F 100%);
+            color: #070C18;
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #FFF099 0%, #E6C35C 50%, #D4AF37 100%);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+        .glass-card {
+            background: rgba(17, 30, 56, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.6);
+        }
+    </style>
+</head>
+<body class="bg-navy-950 text-slate-100 font-sans antialiased selection:bg-gold-600 selection:text-navy-950">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-gradient-to-r from-navy-900 via-gold-700/30 to-navy-900 border-b border-gold-600/30 py-2 px-4 text-xs md:text-sm text-center font-medium text-gold-400 tracking-wider">
+        <i class="fa-solid fa-award mr-2"></i> TRUSTED REAL ESTATE & COMMERCIAL SOLUTIONS &bull; SINCE 2025 &bull; <a href="tel:9025452670" class="underline hover:text-white ml-1"><i class="fa-solid fa-phone mr-1"></i> 9025452670</a>
+    </div>
+
+    <!-- MAIN HEADER NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-navy-900/90 backdrop-blur-md border-b border-gold-600/20 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- LOGO AREA -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="relative w-12 h-12 rounded-full p-0.5 bg-gradient-to-tr from-gold-600 via-gold-400 to-amber-700 shadow-md">
+                    <!-- Embedded Vector Brand Emblem matching provided uploaded logo style -->
+                    <div class="w-full h-full bg-navy-950 rounded-full flex items-center justify-center overflow-hidden border border-gold-500/50">
+                        <svg class="w-8 h-8 text-gold-500" viewBox="0 0 100 100" fill="currentColor">
+                            <path d="M50 10 L85 35 L85 45 L50 20 L15 45 L15 35 Z" fill="#D4AF37"/>
+                            <path d="M50 25 L75 45 L75 55 L50 35 L25 55 L25 45 Z" fill="#AA820A"/>
+                            <rect x="35" y="55" width="30" height="25" fill="#E6C35C" rx="2"/>
+                            <text x="50" y="93" font-family="serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#D4AF37">RP</text>
+                        </svg>
+                    </div>
+                </div>
+                <div>
+                    <span class="font-cinzel font-bold text-lg md:text-xl tracking-wider block gold-gradient-text leading-tight">RP ENTERPERNER</span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-semibold block">Real-Estates &bull; Since 2025</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION LINKS -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="#about" class="hover:text-gold-500 transition-colors">About</a>
+                <a href="#properties" class="hover:text-gold-500 transition-colors">Properties & Plots</a>
+                <a href="#machinery" class="hover:text-gold-500 transition-colors">Heavy Machinery</a>
+                <a href="#services" class="hover:text-gold-500 transition-colors">Services</a>
+                <a href="#contact" class="hover:text-gold-500 transition-colors">Contact</a>
+            </nav>
+
+            <!-- CALL TO ACTION BUTTON -->
+            <div class="flex items-center gap-3">
+                <a href="tel:9025452670" class="gold-btn font-bold px-4 py-2.5 rounded-lg text-xs md:text-sm flex items-center gap-2 shadow-lg">
+                    <i class="fa-solid fa-phone-volume text-navy-950"></i>
+                    <span>Call 9025452670</span>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gold-500 p-2 text-xl focus:outline-none" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobileMenu" class="hidden md:hidden bg-navy-900 border-b border-gold-600/20 px-6 py-4 space-y-3 font-medium text-sm text-slate-300">
+            <a href="#about" class="block hover:text-gold-500 py-1">About Us</a>
+            <a href="#properties" class="block hover:text-gold-500 py-1">Properties & Plots</a>
+            <a href="#machinery" class="block hover:text-gold-500 py-1">Machinery Rental</a>
+            <a href="#services" class="block hover:text-gold-500 py-1">Services</a>
+            <a href="#contact" class="block hover:text-gold-500 py-1">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-navy-900 min-h-[85vh] flex items-center overflow-hidden py-16">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 z-0 opacity-25 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1800&q=80');"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/90 to-navy-900/60 z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- HERO LEFT TEXT -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-600/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-wider uppercase">
+                        <i class="fa-solid fa-crown"></i> Premier Estate & Industrial Partner
+                    </div>
+                    
+                    <h1 class="font-cinzel text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                        RP ENTERPERNER <br/>
+                        <span class="gold-gradient-text">REAL-ESTATES</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        Unmatched excellence in verified land acquisition, prime commercial highway plots, agricultural acreage, and heavy construction equipment (JCB & Tractor) rental solutions.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="https://wa.me/919025452670?text=Hello%20RP%20ENTERPERNER,%20I%20want%20to%20inquire%20about%20your%20properties%20and%20machinery%20services." target="_blank" class="w-full sm:w-auto gold-btn px-6 py-3.5 rounded-lg font-bold text-sm flex items-center justify-center gap-2 shadow-xl">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Instant WhatsApp Booking</span>
+                        </a>
+                        <a href="#properties" class="w-full sm:w-auto px-6 py-3.5 rounded-lg font-semibold text-sm border border-gold-500/40 text-gold-400 hover:bg-gold-500/10 transition-colors flex items-center justify-center gap-2">
+                            <span>Browse Listings</span>
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </a>
+                    </div>
+
+                    <!-- TRUST BADGES -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-cinzel font-bold text-xl md:text-2xl text-gold-400">100%</p>
+                            <p class="text-xs text-slate-400">Verified Titles</p>
+                        </div>
+                        <div>
+                            <p class="font-cinzel font-bold text-xl md:text-2xl text-gold-400">2025</p>
+                            <p class="text-xs text-slate-400">Established</p>
+                        </div>
+                        <div>
+                            <p class="font-cinzel font-bold text-xl md:text-2xl text-gold-400">24/7</p>
+                            <p class="text-xs text-slate-400">Direct Support</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO RIGHT PROMO CARD -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-gold-600/10 rounded-full blur-2xl"></div>
+                        
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-gold-600/20 border border-gold-500/40 flex items-center justify-center text-gold-400 text-xl">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-cinzel font-bold text-white text-lg">Direct Connect</h3>
+                                <p class="text-xs text-slate-400">Talk directly with RP ENTERPERNER</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-sm text-slate-300 mb-6">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-500 mt-1"></i>
+                                <span>Prime Agricultural Land & Industrial Plots</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-500 mt-1"></i>
+                                <span>JCB & Tractor Rental for Site Preparation</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-500 mt-1"></i>
+                                <span>Transparent & Hassle-free Legal Guidance</span>
+                            </li>
+                        </ul>
+
+                        <a href="tel:9025452670" class="w-full bg-navy-800 hover:bg-navy-700 border border-gold-500/30 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center gap-3 transition-colors text-sm">
+                            <i class="fa-solid fa-phone text-gold-500"></i>
+                            <span>Call Now: 9025452670</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND STORY / ABOUT SECTION -->
+    <section id="about" class="py-20 bg-navy-950 relative border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div class="relative">
+                    <div class="aspect-video rounded-xl overflow-hidden border border-gold-500/30 shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80" alt="RP Enterperner Real Estate" class="w-full h-full object-cover"/>
+                        <div class="absolute inset-0 bg-navy-950/30"></div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 glass-card p-4 rounded-xl hidden sm:flex items-center gap-4 border border-gold-500/40">
+                        <div class="text-3xl text-gold-400 font-bold font-cinzel">RP</div>
+                        <div class="text-xs text-slate-300 font-medium">
+                            <p class="font-bold text-white">REAL-ESTATES</p>
+                            <p class="text-gold-500">Est. 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">About RP ENTERPERNER</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">Visionary Real Estate & Infrastructure Partner</h2>
+                    <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+                        Founded with a mission to deliver elite real estate solutions, <strong class="text-gold-400 font-medium">RP ENTERPERNER (Since 2025)</strong> bridges land buyers, investors, and industrial clients with top-tier properties and reliable heavy equipment services.
+                    </p>
+                    <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+                        Whether you are looking to purchase agricultural farmland, highway commercial sites, or need heavy machinery like JCB and Tractors for land leveling and excavation, we provide seamless end-to-end execution.
+                    </p>
+
+                    <div class="pt-4 flex items-center gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-600/10 flex items-center justify-center text-gold-500">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-200">100% Legal Clearance</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-gold-600/10 flex items-center justify-center text-gold-500">
+                                <i class="fa-solid fa-truck-monster"></i>
+                            </div>
+                            <span class="text-sm font-semibold text-slate-200">Machinery Rentals</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REAL ESTATE & PLOT LISTINGS SECTION -->
+    <section id="properties" class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Exclusive Opportunities</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-2">Featured Real Estate & Plots</h2>
+                <p class="text-slate-400 text-sm mt-3">Handpicked prime agricultural acreages, commercial sites, and residential layouts with verified documentation.</p>
+                
+                <!-- CATEGORY FILTER BUTTONS -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8" id="filterBtns">
+                    <button onclick="filterProperties('all')" class="filter-btn active px-4 py-2 rounded-lg text-xs font-semibold bg-gold-600 text-navy-950 border border-gold-500 transition-all">All Listings</button>
+                    <button onclick="filterProperties('agricultural')" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-navy-800 text-slate-300 border border-slate-700 hover:border-gold-500/50 transition-all">Agricultural Land</button>
+                    <button onclick="filterProperties('commercial')" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-navy-800 text-slate-300 border border-slate-700 hover:border-gold-500/50 transition-all">Commercial Plots</button>
+                    <button onclick="filterProperties('residential')" class="filter-btn px-4 py-2 rounded-lg text-xs font-semibold bg-navy-800 text-slate-300 border border-slate-700 hover:border-gold-500/50 transition-all">Residential Plots</button>
+                </div>
+            </div>
+
+            <!-- PROPERTIES GRID -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="propertyGrid">
+                
+                <!-- Property Card 1 -->
+                <div class="property-card glass-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1" data-category="agricultural">
+                    <div class="relative h-56">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80" alt="Agricultural Acreage" class="w-full h-full object-cover"/>
+                        <span class="absolute top-3 left-3 bg-navy-950/80 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/40 uppercase">Agricultural</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Prime Agricultural Farmland</h3>
+                        <p class="text-slate-400 text-xs mb-4">Fertile soil with ground water access, clear fencing, and road approachability. Suitable for long-term farm investment.</p>
+                        <div class="border-t border-slate-800 pt-4 flex items-center justify-between">
+                            <span class="text-gold-400 font-bold text-sm">Best Market Rate</span>
+                            <a href="https://wa.me/919025452670?text=I%20am%20interested%20in%20Agricultural%20Farmland" target="_blank" class="text-xs gold-btn px-3 py-2 rounded font-bold">Inquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card glass-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1" data-category="commercial">
+                    <div class="relative h-56">
+                        <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=600&q=80" alt="Commercial Highway Plot" class="w-full h-full object-cover"/>
+                        <span class="absolute top-3 left-3 bg-navy-950/80 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/40 uppercase">Commercial</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">State Highway Frontage Plot</h3>
+                        <p class="text-slate-400 text-xs mb-4">High visibility site ideal for warehouses, logistics hubs, petrol pumps, or commercial showrooms.</p>
+                        <div class="border-t border-slate-800 pt-4 flex items-center justify-between">
+                            <span class="text-gold-400 font-bold text-sm">Direct Deal</span>
+                            <a href="https://wa.me/919025452670?text=I%20am%20interested%20in%20Commercial%20Highway%20Plot" target="_blank" class="text-xs gold-btn px-3 py-2 rounded font-bold">Inquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card glass-card rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1" data-category="residential">
+                    <div class="relative h-56">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Residential Layout" class="w-full h-full object-cover"/>
+                        <span class="absolute top-3 left-3 bg-navy-950/80 text-gold-400 text-[11px] font-bold px-3 py-1 rounded-full border border-gold-500/40 uppercase">Residential</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel text-lg font-bold text-white mb-2">Approved Villa Plots</h3>
+                        <p class="text-slate-400 text-xs mb-4">Gated community setup with wide blacktop roads, streetlights, and electricity supply ready for construction.</p>
+                        <div class="border-t border-slate-800 pt-4 flex items-center justify-between">
+                            <span class="text-gold-400 font-bold text-sm">Flexible Plots</span>
+                            <a href="https://wa.me/919025452670?text=I%20am%20interested%20in%20Residential%20Villa%20Plots" target="_blank" class="text-xs gold-btn px-3 py-2 rounded font-bold">Inquire Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HEAVY MACHINERY RENTAL SECTION (JCB & TRACTOR) -->
+    <section id="machinery" class="py-20 bg-navy-950 border-t border-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Construction & Agricultural Support</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-2">Commercial Heavy Machinery Rental</h2>
+                <p class="text-slate-400 text-sm mt-3">Experienced drivers and well-maintained machinery available for site leveling, trenching, plowing, and earthmoving.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- MACHINERY CARD 1: JCB -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-xl"></div>
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-gold-400 text-xs font-bold uppercase tracking-wider">Earthmoving & Excavation</span>
+                                <h3 class="font-cinzel text-2xl font-bold text-white mt-1">JCB Heavy Excavator</h3>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-gold-600/20 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl">
+                                <i class="fa-solid fa-truck-pickup"></i>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Land Clearing & Tree Removal
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Foundation Digging & Trenching
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Plot Leveling & Demolition Work
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Hourly / Daily Booking Flexible Rates
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400">Available For</p>
+                            <p class="font-bold text-gold-400 text-sm">Hourly & Daily Rental</p>
+                        </div>
+                        <a href="https://wa.me/919025452670?text=Hi%20RP%20ENTERPERNER,%20I%20want%20to%20book%20a%20JCB%20for%20my%20site." target="_blank" class="gold-btn px-5 py-2.5 rounded-lg text-xs font-bold flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp"></i> Book JCB
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MACHINERY CARD 2: TRACTOR -->
+                <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-gold-600/10 rounded-full blur-xl"></div>
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-gold-400 text-xs font-bold uppercase tracking-wider">Agriculture & Transport</span>
+                                <h3 class="font-cinzel text-2xl font-bold text-white mt-1">Commercial Tractor & Rotavator</h3>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-gold-600/20 border border-gold-500/30 flex items-center justify-center text-gold-400 text-xl">
+                                <i class="fa-solid fa-tractor"></i>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Agricultural Soil Tilling & Plowing
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Trailer Transport for Debris & Goods
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Post-Excavation Field Preparation
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-check text-gold-500"></i> Experienced Drivers Included
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs text-slate-400">Available For</p>
+                            <p class="font-bold text-gold-400 text-sm">Farm & Site Work</p>
+                        </div>
+                        <a href="https://wa.me/919025452670?text=Hi%20RP%20ENTERPERNER,%20I%20want%20to%20book%20a%20Tractor%20for%20rental." target="_blank" class="gold-btn px-5 py-2.5 rounded-lg text-xs font-bold flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp"></i> Book Tractor
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES OVERVIEW -->
+    <section id="services" class="py-20 bg-navy-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">End-to-End Solutions</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-2">Our Core Services</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-xl text-center space-y-4">
+                    <div class="w-14 h-14 rounded-full bg-gold-600/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl mx-auto">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Land Buying & Selling</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Direct buyer and seller matching for agricultural and commercial lands with complete legal verification.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl text-center space-y-4">
+                    <div class="w-14 h-14 rounded-full bg-gold-600/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl mx-auto">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Plot Layout Marketing</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Promoting residential layouts and commercial highway sites for enterprise owners and developers.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl text-center space-y-4">
+                    <div class="w-14 h-14 rounded-full bg-gold-600/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl mx-auto">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Machinery Logistics</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Prompt dispatch of JCBs and Tractors for field clearing, earthmoving, and civil site work.</p>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl text-center space-y-4">
+                    <div class="w-14 h-14 rounded-full bg-gold-600/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl mx-auto">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h4 class="font-cinzel font-bold text-white text-lg">Legal Documentation</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Assistance with encumbrance certificates (EC), registration clearance, and boundary surveys.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & DIRECT LEAD FORM SECTION -->
+    <section id="contact" class="py-20 bg-navy-950 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- CONTACT INFO LEFT -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-gold-500 font-semibold text-xs tracking-widest uppercase">Get in Touch</span>
+                    <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">Contact RP ENTERPERNER</h2>
+                    <p class="text-slate-300 text-sm font-light">Have questions about land listings or machinery availability? Contact us directly or send a WhatsApp message.</p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4 glass-card p-4 rounded-xl">
+                            <div class="w-12 h-12 rounded-lg bg-gold-600/20 border border-gold-500/40 flex items-center justify-center text-gold-400 text-xl shrink-0">
+                                <i class="fa-solid fa-phone-volume"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Direct Phone Call</p>
+                                <a href="tel:9025452670" class="text-lg font-bold text-white hover:text-gold-400 transition-colors">9025452670</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 glass-card p-4 rounded-xl">
+                            <div class="w-12 h-12 rounded-lg bg-gold-600/20 border border-gold-500/40 flex items-center justify-center text-gold-400 text-xl shrink-0">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">WhatsApp Contact</p>
+                                <a href="https://wa.me/919025452670" target="_blank" class="text-lg font-bold text-white hover:text-gold-400 transition-colors">+91 9025452670</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 glass-card p-4 rounded-xl">
+                            <div class="w-12 h-12 rounded-lg bg-gold-600/20 border border-gold-500/40 flex items-center justify-center text-gold-400 text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400">Main Office / Operations</p>
+                                <p class="text-sm font-semibold text-white">Prime Real-Estate Hub, Tamil Nadu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEAD FORM RIGHT -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 rounded-2xl relative">
+                        <h3 class="font-cinzel text-xl font-bold text-white mb-2">Send Inquiry / Book Service</h3>
+                        <p class="text-xs text-slate-400 mb-6">Submitting this form will automatically prepare a formatted WhatsApp message to 9025452670.</p>
+
+                        <form id="leadForm" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name</label>
+                                    <input type="text" id="custName" required placeholder="Name" class="w-full bg-navy-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500"/>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-300 mb-1">Mobile / Phone Number</label>
+                                    <input type="tel" id="custPhone" required placeholder="9025452670" class="w-full bg-navy-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500"/>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Select Service Category</label>
+                                <select id="custService" class="w-full bg-navy-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500">
+                                    <option value="Buy Agricultural Land">Buy Agricultural Farmland</option>
+                                    <option value="Buy Commercial Plot">Buy Highway / Commercial Plot</option>
+                                    <option value="Buy Residential Layout">Buy Residential Villa Plot</option>
+                                    <option value="Book JCB Machinery">Book JCB Machine Rental</option>
+                                    <option value="Book Tractor Service">Book Tractor Rental</option>
+                                    <option value="Sell Property Listing">Sell My Property / Plot</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Property Location / Specific Details</label>
+                                <textarea id="custMsg" rows="4" placeholder="Enter location preference, budget, or work requirements..." class="w-full bg-navy-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-gold-500"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-btn py-4 rounded-lg font-bold text-sm flex items-center justify-center gap-2 shadow-xl">
+                                <i class="fa-brands fa-whatsapp text-lg"></i>
+                                <span>Send Direct WhatsApp Inquiry</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy-950 border-t border-slate-900 py-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            
+            <div class="flex items-center justify-center gap-3">
+                <svg class="w-7 h-7 text-gold-500" viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M50 10 L85 35 L85 45 L50 20 L15 45 L15 35 Z" fill="#D4AF37"/>
+                    <rect x="35" y="55" width="30" height="25" fill="#E6C35C" rx="2"/>
+                </svg>
+                <span class="font-cinzel font-bold text-white text-lg tracking-wider">RP ENTERPERNER</span>
+            </div>
+
+            <p class="max-w-md mx-auto text-slate-400">RP ENTERPERNER Real-Estates (Since 2025). Delivering trusted real estate listings and commercial heavy machinery services.</p>
+
+            <div class="flex justify-center gap-6 text-sm text-gold-400">
+                <a href="tel:9025452670" class="hover:underline"><i class="fa-solid fa-phone mr-1"></i> Call 9025452670</a>
+                <a href="https://wa.me/919025452670" target="_blank" class="hover:underline"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp</a>
+            </div>
+
+            <p class="text-slate-400 border-t border-slate-900 pt-6">&copy; 2026 RP ENTERPERNER Real-Estates. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- DYNAMIC JAVASCRIPT LOGIC -->
+    <script>
+        // MOBILE MENU TOGGLE
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // PROPERTY FILTERING LOGIC
+        function filterProperties(category) {
+            const cards = document.querySelectorAll('.property-card');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-gold-600', 'text-navy-950');
+                btn.classList.add('bg-navy-800', 'text-slate-300');
+            });
+
+            event.target.classList.remove('bg-navy-800', 'text-slate-300');
+            event.target.classList.add('bg-gold-600', 'text-navy-950');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // LEAD GENERATION FORM WHATSAPP SUBMISSION
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('custName').value;
+            const phone = document.getElementById('custPhone').value;
+            const service = document.getElementById('custService').value;
+            const message = document.getElementById('custMsg').value;
+
+            const text = `*NEW INQUIRY FOR RP ENTERPERNER*%0A%0A` +
+                         `*Name:* ${encodeURIComponent(name)}%0A` +
+                         `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                         `*Service:* ${encodeURIComponent(service)}%0A` +
+                         `*Details:* ${encodeURIComponent(message)}`;
+
+            const targetNum = '919025452670';
+            const whatsappUrl = `https://wa.me/${targetNum}?text=${text}`;
+
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
